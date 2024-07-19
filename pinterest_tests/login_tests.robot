@@ -7,8 +7,8 @@ Suite Teardown    Close Browser
 *** Variables ***
 ${BASE_URL}    https://br.pinterest.com/
 ${BROWSER}     Chrome
-${USERNAME}    cihespanhol@gmail.com
-${PASSWORD}    toomanynights
+${USERNAME}    email
+${PASSWORD}    senha
 *** Test Cases ***
 Login with Valid Credentials
     [Documentation]    Testa o login com credenciais válidas
