@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-19T15:30:39.735700" rpa="false" schemaversion="5">
+<suite id="s1" name="Cart Management Tests" source="C:\Users\not\Desktop\testes_Robot\ecommerceFiozato_tests\cart_management_tests.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-07-19T15:30:40.096053" level="INFO">Opening browser 'Chrome' to base url 'https://fiozato.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-19T15:30:40.096053" elapsed="9.874626"/>
+</kw>
+<test id="s1-t1" name="Add Item to Cart" line="12">
+<kw name="Open Product Page">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-19T15:30:49.973671" elapsed="0.222945"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-19T15:30:50.197614" level="INFO">Opening url 'https://fiozato.com/products/vestido-perola?_pos=1&amp;_psq=vestido+pe&amp;_ss=e&amp;_v=1.0'</msg>
+<arg>https://fiozato.com/products/vestido-perola?_pos=1&amp;_psq=vestido+pe&amp;_ss=e&amp;_v=1.0</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-19T15:30:50.196616" elapsed="3.138277"/>
+</kw>
+<status status="PASS" start="2024-07-19T15:30:49.972672" elapsed="3.362221"/>
+</kw>
+<kw name="Add Product to Cart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[contains(@class,'product-form__add-button button button--secondary button--full')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-19T15:30:53.335891" elapsed="0.225931"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-19T15:30:53.561822" level="INFO">Clicking button '//button[contains(@class,'product-form__add-button button button--secondary button--full')]'.</msg>
+<arg>//button[contains(@class,'product-form__add-button button button--secondary button--full')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T15:30:53.561822" elapsed="0.154465"/>
+</kw>
+<status status="PASS" start="2024-07-19T15:30:53.335891" elapsed="0.380396"/>
+</kw>
+<doc>Testa a adição de um item ao carrinho de compras</doc>
+<status status="PASS" start="2024-07-19T15:30:49.971677" elapsed="3.746605"/>
+</test>
+<test id="s1-t2" name="Remove Item from Cart" line="17">
+<kw name="Remove Product from Cart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[contains(@class,'line-item__remove-button link text--subdued text--xxsmall')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-19T15:30:53.720277" elapsed="1.175272"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-19T15:30:54.896547" level="INFO">Clicking element '//a[contains(@class,'line-item__remove-button link text--subdued text--xxsmall')]'.</msg>
+<arg>//a[contains(@class,'line-item__remove-button link text--subdued text--xxsmall')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-19T15:30:54.896547" elapsed="0.062506"/>
+</kw>
+<status status="PASS" start="2024-07-19T15:30:53.720277" elapsed="1.238776"/>
+</kw>
+<doc>Testa a remoção de um item do carrinho de compras</doc>
+<status status="PASS" start="2024-07-19T15:30:53.719280" elapsed="1.240803"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-19T15:30:54.962051" elapsed="2.388727"/>
+</kw>
+<status status="PASS" start="2024-07-19T15:30:39.738692" elapsed="17.612086"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Cart Management Tests">Cart Management Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
